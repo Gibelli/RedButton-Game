@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".xmlfrag"
+    android:background="#ff2f2f2f"
+    android:id="@+id/layoutGame">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:src="@drawable/botaovermelho"
+        android:onClick="redButton"
+        android:layout_below="@+id/timelft"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/gameTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Time Left"
+        android:id="@+id/temporestante"
+        android:textColor="#ffffffff"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="tempo"
+        android:id="@+id/timelft"
+        android:textSize="30dp"
+        android:textColor="#ffffffff"
+        android:visibility="invisible"
+        android:layout_below="@+id/temporestante"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Press the button \n          to start"
+        android:id="@+id/startText"
+        android:layout_below="@+id/imageButton"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"
+        android:textColor="#ffffffff" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retry"
+        android:id="@+id/button3"
+        android:textColor="#ffffffff"
+        android:textSize="25dp"
+        android:onClick="Retry"
+        android:layout_below="@+id/button5"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/button5"
+        android:layout_toEndOf="@+id/imageButton"
+        android:textColor="#ffffffff"
+        android:textSize="20dp"
+        android:enabled="false"
+        android:layout_below="@+id/startText"
+        android:layout_toRightOf="@+id/imageButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/back"
+        android:layout_above="@+id/button3"
+        android:layout_toLeftOf="@+id/imageButton"
+        android:layout_toStartOf="@+id/imageButton"
+        android:enabled="true"
+        android:clickable="true"
+        android:textColor="#ffffffff"
+        android:textSize="25dp"
+        android:onClick="comingBack"
+        android:visibility="visible" />
+
+</RelativeLayout>

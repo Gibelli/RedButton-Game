@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff2f2f2f"
+    android:id="@+id/layoutMenu">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Button Presser"
+        android:id="@+id/gameTitle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffffff"
+        android:textSize="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Seconds"
+        android:id="@+id/Segundos"
+        android:layout_below="@+id/gameTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffffff"
+        android:textSize="30dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/plusSeconds"
+        android:layout_below="@+id/Segundos"
+        android:layout_alignRight="@+id/gameTitle"
+        android:layout_alignEnd="@+id/gameTitle"
+        android:textColor="#ffffffff"
+        android:textSize="30dp"
+        android:onClick="soma"
+        android:longClickable="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/minusSecods"
+        android:layout_below="@+id/Segundos"
+        android:layout_alignLeft="@+id/gameTitle"
+        android:layout_alignStart="@+id/gameTitle"
+        android:textColor="#ffffffff"
+        android:textSize="30dp"
+        android:onClick="subtrai" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/timeSeconds"
+        android:layout_alignBottom="@+id/minusSecods"
+
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Minutes"
+        android:id="@+id/Minutes"
+        android:layout_below="@+id/plusSeconds"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffffff"
+        android:textSize="30dp"
+        android:textIsSelectable="false" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/plusMinutes"
+        android:layout_below="@+id/Minutes"
+        android:layout_alignRight="@+id/plusSeconds"
+        android:layout_alignEnd="@+id/plusSeconds"
+        android:layout_alignLeft="@+id/plusSeconds"
+        android:layout_alignStart="@+id/plusSeconds"
+        android:textSize="30sp"
+        android:textColor="#ffffffff"
+        android:onClick="somaMinuto" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/minusMinutes"
+        android:layout_alignBottom="@+id/plusMinutes"
+        android:layout_alignLeft="@+id/minusSecods"
+        android:layout_alignStart="@+id/minusSecods"
+        android:textColor="#ffffffff"
+        android:textSize="30dp"
+        android:onClick="subtraiMinuto" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/timeMinutes"
+        android:layout_alignBottom="@+id/plusMinutes"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffffff"
+        android:textSize="30dp"
+        android:textIsSelectable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Hours"
+        android:id="@+id/Hours"
+        android:layout_below="@+id/timeMinutes"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffffff"
+        android:textSize="30dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/plusHours"
+        android:layout_below="@+id/Hours"
+        android:layout_alignRight="@+id/gameTitle"
+        android:layout_alignEnd="@+id/gameTitle"
+        android:textColor="#ffffffff"
+        android:textSize="30dp"
+        android:onClick="somaHora" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/minusHours"
+        android:layout_alignTop="@+id/plusHours"
+        android:layout_alignLeft="@+id/minusMinutes"
+        android:layout_alignStart="@+id/minusMinutes"
+        android:textSize="30dp"
+        android:textColor="#ffffffff"
+        android:onClick="subtraiHora" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/timeHours"
+        android:layout_alignBottom="@+id/plusHours"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:textColor="#ffffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="START"
+        android:id="@+id/inicio"
+        android:layout_below="@+id/plusHours"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffffff"
+        android:textSize="30dp"
+        android:onClick="SwitchLayout" />
+
+</RelativeLayout>
